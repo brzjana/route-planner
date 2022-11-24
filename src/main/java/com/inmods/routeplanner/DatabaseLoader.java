@@ -16,9 +16,9 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.data.geo.Point;
 import org.springframework.stereotype.Component;
 
-
+//wird einfach aufgerugen, wenn Spring startet (Frage: Muss der DataLoader auch beim Testen geladen werden? -nein)
 @Component
-@Profile("!mocktest")
+@Profile("!mocktest") //Deshalb dies; nur starten, wenn nicht testprofile
 public class DatabaseLoader implements CommandLineRunner {
 
     Logger logger = LoggerFactory.getLogger(DatabaseLoader.class);
